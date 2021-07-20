@@ -1,4 +1,5 @@
 import React from "react";
+import Links from "./Links"
 
 function About(prop) {
   const bioText = prop.bio
@@ -14,9 +15,10 @@ function About(prop) {
       <h2>About Me</h2> 
       {bio()}
       <img src="https://i.imgur.com/mV8PQxj.gif" alt="I made this" />
-      <h3>Links</h3>
-      <a href={prop.github}>{prop.github}</a>
-      <a href={prop.linkedin}>{prop.linkedin}</a>
+      <Links 
+        gitHub={prop.github}
+        linkeDin={prop.linkedin}
+      />
     </div>
   );
 }
